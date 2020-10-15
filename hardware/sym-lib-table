@@ -1,0 +1,9 @@
+(sym_lib_table
+  (lib (name hack_hack-cache)(type Legacy)(uri ${KIPRJMOD}/hack_hack-cache.lib)(options "")(descr ""))
+  (lib (name LibCool)(type Legacy)(uri D:/software/KICAD/NewLibcool.pretty-master/LibCool.lib)(options "")(descr ""))
+  (lib (name Connector)(type Legacy)(uri ${KICAD_SYMBOL_DIR}/Connector.lib)(options "")(descr ""))
+  (lib (name power)(type Legacy)(uri ${KICAD_SYMBOL_DIR}/power.lib)(options "")(descr ""))
+  (lib (name Display_Character)(type Legacy)(uri ${KICAD_SYMBOL_DIR}/Display_Character.lib)(options "")(descr ""))
+  (lib (name Display_Graphic)(type Legacy)(uri ${KICAD_SYMBOL_DIR}/Display_Graphic.lib)(options "")(descr ""))
+  (lib (name Driver_Display)(type Legacy)(uri ${KICAD_SYMBOL_DIR}/Driver_Display.lib)(options "")(descr ""))
+)
