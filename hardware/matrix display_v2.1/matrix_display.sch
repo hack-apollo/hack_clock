@@ -1,0 +1,987 @@
+EESchema Schematic File Version 4
+LIBS:matrix_display-cache
+EELAYER 30 0
+EELAYER END
+$Descr A3 16535 11693
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector:Conn_01x05_Male J1
+U 1 1 5DB6D415
+P 7170 1885
+F 0 "J1" H 7220 2210 50  0000 C CNN
+F 1 "Conn_01x05_Male" H 7545 1610 50  0000 C CNN
+F 2 "Connector_PinHeader_2.00mm:PinHeader_1x05_P2.00mm_Vertical" H 7170 1885 50  0001 C CNN
+F 3 "~" H 7170 1885 50  0001 C CNN
+	1    7170 1885
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7370 1685 7795 1685
+Wire Wire Line
+	7370 1785 7920 1785
+Wire Wire Line
+	7370 1985 7920 1985
+Wire Wire Line
+	7370 2085 7920 2085
+$Comp
+L power:+5V #PWR0122
+U 1 1 5DB759CC
+P 7795 1685
+F 0 "#PWR0122" H 7795 1535 50  0001 C CNN
+F 1 "+5V" V 7720 1660 50  0000 L CNN
+F 2 "" H 7795 1685 50  0001 C CNN
+F 3 "" H 7795 1685 50  0001 C CNN
+	1    7795 1685
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0123
+U 1 1 5DB7617D
+P 7920 1785
+F 0 "#PWR0123" H 7920 1535 50  0001 C CNN
+F 1 "GND" H 7925 1612 50  0000 C CNN
+F 2 "" H 7920 1785 50  0001 C CNN
+F 3 "" H 7920 1785 50  0001 C CNN
+	1    7920 1785
+	0    -1   -1   0   
+$EndComp
+Text Label 7720 1985 0    50   ~ 0
+CS
+Text Label 7720 2085 0    50   ~ 0
+CLK
+$Comp
+L LibCool:MAX7219 U1
+U 1 1 5DB5E42D
+P 2500 2200
+F 0 "U1" H 2500 2450 60  0000 C CNN
+F 1 "MAX7219" H 2500 1150 60  0000 C CNN
+F 2 "Package_SO:SOIC-24W_7.5x15.4mm_P1.27mm" H 2500 2200 60  0001 C CNN
+F 3 "" H 2500 2200 60  0000 C CNN
+	1    2500 2200
+	1    0    0    -1  
+$EndComp
+Text Label 1650 2050 0    50   ~ 0
+DIN
+Wire Wire Line
+	1900 2150 1650 2150
+Wire Wire Line
+	1900 2250 1650 2250
+Text Label 1650 2250 0    50   ~ 0
+CLK
+Text Label 1650 2150 0    50   ~ 0
+CS
+Wire Wire Line
+	3100 2150 3450 2150
+Text Label 3200 2150 0    50   ~ 0
+1SEGDP
+Wire Wire Line
+	3100 2250 3450 2250
+Wire Wire Line
+	3100 2350 3450 2350
+Wire Wire Line
+	3100 2450 3450 2450
+Wire Wire Line
+	3100 2550 3450 2550
+Wire Wire Line
+	3100 2650 3450 2650
+Wire Wire Line
+	3100 2750 3450 2750
+Wire Wire Line
+	3100 2850 3450 2850
+Text Label 3200 2250 0    50   ~ 0
+1SEGG
+Text Label 3200 2350 0    50   ~ 0
+1SEGF
+Text Label 3200 2450 0    50   ~ 0
+1SEGE
+Text Label 3200 2550 0    50   ~ 0
+1SEGD
+Text Label 3200 2650 0    50   ~ 0
+1SEGC
+Text Label 3200 2750 0    50   ~ 0
+1SEGB
+Text Label 3200 2850 0    50   ~ 0
+1SEGA
+$Comp
+L power:+5V #PWR0101
+U 1 1 5DB61D21
+P 3700 2950
+F 0 "#PWR0101" H 3700 2800 50  0001 C CNN
+F 1 "+5V" V 3625 2925 50  0000 L CNN
+F 2 "" H 3700 2950 50  0001 C CNN
+F 3 "" H 3700 2950 50  0001 C CNN
+	1    3700 2950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3100 2950 3400 2950
+$Comp
+L LibCool:RES(M) R1
+U 1 1 5DB62DB3
+P 3250 3050
+F 0 "R1" H 3400 3000 39  0000 C CNN
+F 1 "10K" H 3250 3050 39  0000 C CNN
+F 2 "NewLibCool:0603_R" H 3250 3050 60  0001 C CNN
+F 3 "" H 3250 3050 60  0000 C CNN
+	1    3250 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 3050 3400 2950
+Connection ~ 3400 2950
+Wire Wire Line
+	3400 2950 3550 2950
+$Comp
+L LibCool:C(MM) C1
+U 1 1 5DB63FE6
+P 3550 3050
+F 0 "C1" V 3512 3128 39  0000 L CNN
+F 1 "0.1uF" V 3587 3128 39  0000 L CNN
+F 2 "NewLibCool:0603_C" H 3588 2900 30  0001 C CNN
+F 3 "" H 3550 3050 60  0000 C CNN
+	1    3550 3050
+	0    1    1    0   
+$EndComp
+Connection ~ 3550 2950
+Wire Wire Line
+	3550 2950 3700 2950
+Wire Wire Line
+	3100 3150 3550 3150
+Wire Wire Line
+	1900 3150 1900 3350
+Wire Wire Line
+	1900 3350 3550 3350
+Wire Wire Line
+	3550 3350 3550 3150
+Connection ~ 3550 3150
+$Comp
+L power:GND #PWR0102
+U 1 1 5DB666D5
+P 3550 3350
+F 0 "#PWR0102" H 3550 3100 50  0001 C CNN
+F 1 "GND" H 3555 3177 50  0000 C CNN
+F 2 "" H 3550 3350 50  0001 C CNN
+F 3 "" H 3550 3350 50  0001 C CNN
+	1    3550 3350
+	1    0    0    -1  
+$EndComp
+Connection ~ 3550 3350
+Wire Wire Line
+	1900 2350 1650 2350
+Wire Wire Line
+	1900 2450 1650 2450
+Wire Wire Line
+	1900 2550 1650 2550
+Wire Wire Line
+	1900 2650 1650 2650
+Wire Wire Line
+	1900 2750 1650 2750
+Wire Wire Line
+	1900 2850 1650 2850
+Wire Wire Line
+	1900 2950 1650 2950
+Wire Wire Line
+	1900 3050 1650 3050
+Text Label 1650 2350 0    50   ~ 0
+1DIG0
+Text Label 1650 2450 0    50   ~ 0
+1DIG1
+Text Label 1650 2550 0    50   ~ 0
+1DIG2
+Text Label 1650 2650 0    50   ~ 0
+1DIG3
+Text Label 1650 2750 0    50   ~ 0
+1DIG4
+Text Label 1650 2850 0    50   ~ 0
+1DIG5
+Text Label 1650 2950 0    50   ~ 0
+1DIG6
+Text Label 1650 3050 0    50   ~ 0
+1DIG7
+$Comp
+L LibCool:Matrix_LED D1
+U 1 1 5DB77BD7
+P 5200 2000
+F 0 "D1" H 5828 1895 60  0000 L CNN
+F 1 "Matrix_LED" H 5828 1789 60  0000 L CNN
+F 2 "NewLibCool:Matrix_LED" H 4900 2200 60  0001 C CNN
+F 3 "" H 4900 2200 60  0000 C CNN
+	1    5200 2000
+	1    0    0    -1  
+$EndComp
+Text Label 4050 1650 0    50   ~ 0
+1DIG0
+Text Label 4050 1750 0    50   ~ 0
+1DIG1
+Text Label 4050 1850 0    50   ~ 0
+1DIG2
+Text Label 4050 1950 0    50   ~ 0
+1DIG3
+Text Label 4050 2050 0    50   ~ 0
+1DIG4
+Text Label 4050 2150 0    50   ~ 0
+1DIG5
+Text Label 4050 2250 0    50   ~ 0
+1DIG6
+Text Label 4050 2350 0    50   ~ 0
+1DIG7
+Wire Wire Line
+	4050 1650 4300 1650
+Wire Wire Line
+	4050 1750 4300 1750
+Wire Wire Line
+	4050 1850 4300 1850
+Wire Wire Line
+	4050 1950 4300 1950
+Wire Wire Line
+	4050 2050 4300 2050
+Wire Wire Line
+	4050 2150 4300 2150
+Wire Wire Line
+	4050 2250 4300 2250
+Wire Wire Line
+	4050 2350 4300 2350
+Text Label 4850 3150 1    50   ~ 0
+1SEGDP
+Text Label 4950 3150 1    50   ~ 0
+1SEGA
+Text Label 5050 3150 1    50   ~ 0
+1SEGB
+Text Label 5150 3150 1    50   ~ 0
+1SEGC
+Text Label 5250 3150 1    50   ~ 0
+1SEGD
+Text Label 5350 3150 1    50   ~ 0
+1SEGE
+Text Label 5450 3150 1    50   ~ 0
+1SEGF
+Text Label 5550 3150 1    50   ~ 0
+1SEGG
+Wire Wire Line
+	4850 2900 4850 3150
+Wire Wire Line
+	4950 2900 4950 3150
+Wire Wire Line
+	5050 2900 5050 3150
+Wire Wire Line
+	5150 2900 5150 3150
+Wire Wire Line
+	5250 2900 5250 3150
+Wire Wire Line
+	5350 2900 5350 3150
+Wire Wire Line
+	5450 2900 5450 3150
+Wire Wire Line
+	5550 2900 5550 3150
+$Comp
+L LibCool:MAX7219 U4
+U 1 1 5DB71A3F
+P 9800 2200
+F 0 "U4" H 9800 2450 60  0000 C CNN
+F 1 "MAX7219" H 9800 1150 60  0000 C CNN
+F 2 "Package_SO:SOIC-24W_7.5x15.4mm_P1.27mm" H 9800 2200 60  0001 C CNN
+F 3 "" H 9800 2200 60  0000 C CNN
+	1    9800 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9200 2150 8950 2150
+Wire Wire Line
+	9200 2250 8950 2250
+Text Label 8950 2250 0    50   ~ 0
+CLK
+Text Label 8950 2150 0    50   ~ 0
+CS
+Wire Wire Line
+	10400 2150 10750 2150
+Text Label 10500 2150 0    50   ~ 0
+4SEGDP
+Wire Wire Line
+	10400 2250 10750 2250
+Wire Wire Line
+	10400 2350 10750 2350
+Wire Wire Line
+	10400 2450 10750 2450
+Wire Wire Line
+	10400 2550 10750 2550
+Wire Wire Line
+	10400 2650 10750 2650
+Wire Wire Line
+	10400 2750 10750 2750
+Wire Wire Line
+	10400 2850 10750 2850
+Text Label 10500 2250 0    50   ~ 0
+4SEGG
+Text Label 10500 2350 0    50   ~ 0
+4SEGF
+Text Label 10500 2450 0    50   ~ 0
+4SEGE
+Text Label 10500 2550 0    50   ~ 0
+4SEGD
+Text Label 10500 2650 0    50   ~ 0
+4SEGC
+Text Label 10500 2750 0    50   ~ 0
+4SEGB
+Text Label 10500 2850 0    50   ~ 0
+4SEGA
+$Comp
+L power:+5V #PWR0103
+U 1 1 5DB71A61
+P 11000 2950
+F 0 "#PWR0103" H 11000 2800 50  0001 C CNN
+F 1 "+5V" V 10925 2925 50  0000 L CNN
+F 2 "" H 11000 2950 50  0001 C CNN
+F 3 "" H 11000 2950 50  0001 C CNN
+	1    11000 2950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	10400 2950 10700 2950
+$Comp
+L LibCool:RES(M) R4
+U 1 1 5DB71A6C
+P 10550 3050
+F 0 "R4" H 10700 3000 39  0000 C CNN
+F 1 "10K" H 10550 3050 39  0000 C CNN
+F 2 "NewLibCool:0603_R" H 10550 3050 60  0001 C CNN
+F 3 "" H 10550 3050 60  0000 C CNN
+	1    10550 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10700 3050 10700 2950
+Connection ~ 10700 2950
+Wire Wire Line
+	10700 2950 10850 2950
+$Comp
+L LibCool:C(MM) C4
+U 1 1 5DB71A79
+P 10850 3050
+F 0 "C4" V 10812 3128 39  0000 L CNN
+F 1 "0.1uF" V 10887 3128 39  0000 L CNN
+F 2 "NewLibCool:0603_C" H 10888 2900 30  0001 C CNN
+F 3 "" H 10850 3050 60  0000 C CNN
+	1    10850 3050
+	0    1    1    0   
+$EndComp
+Connection ~ 10850 2950
+Wire Wire Line
+	10850 2950 11000 2950
+Wire Wire Line
+	10400 3150 10850 3150
+Wire Wire Line
+	9200 3150 9200 3350
+Wire Wire Line
+	9200 3350 10850 3350
+Wire Wire Line
+	10850 3350 10850 3150
+Connection ~ 10850 3150
+$Comp
+L power:GND #PWR0104
+U 1 1 5DB71A8A
+P 10850 3350
+F 0 "#PWR0104" H 10850 3100 50  0001 C CNN
+F 1 "GND" H 10855 3177 50  0000 C CNN
+F 2 "" H 10850 3350 50  0001 C CNN
+F 3 "" H 10850 3350 50  0001 C CNN
+	1    10850 3350
+	1    0    0    -1  
+$EndComp
+Connection ~ 10850 3350
+Wire Wire Line
+	9200 2350 8950 2350
+Wire Wire Line
+	9200 2450 8950 2450
+Wire Wire Line
+	9200 2550 8950 2550
+Wire Wire Line
+	9200 2650 8950 2650
+Wire Wire Line
+	9200 2750 8950 2750
+Wire Wire Line
+	9200 2850 8950 2850
+Wire Wire Line
+	9200 2950 8950 2950
+Wire Wire Line
+	9200 3050 8950 3050
+Text Label 8950 2350 0    50   ~ 0
+4DIG0
+Text Label 8950 2450 0    50   ~ 0
+4DIG1
+Text Label 8950 2550 0    50   ~ 0
+4DIG2
+Text Label 8950 2650 0    50   ~ 0
+4DIG3
+Text Label 8950 2750 0    50   ~ 0
+4DIG4
+Text Label 8950 2850 0    50   ~ 0
+4DIG5
+Text Label 8950 2950 0    50   ~ 0
+4DIG6
+Text Label 8950 3050 0    50   ~ 0
+4DIG7
+$Comp
+L LibCool:Matrix_LED D4
+U 1 1 5DB71AA5
+P 12500 2000
+F 0 "D4" H 13128 1895 60  0000 L CNN
+F 1 "Matrix_LED" H 13128 1789 60  0000 L CNN
+F 2 "NewLibCool:Matrix_LED" H 12200 2200 60  0001 C CNN
+F 3 "" H 12200 2200 60  0000 C CNN
+	1    12500 2000
+	1    0    0    -1  
+$EndComp
+Text Label 11350 1650 0    50   ~ 0
+4DIG0
+Text Label 11350 1750 0    50   ~ 0
+4DIG1
+Text Label 11350 1850 0    50   ~ 0
+4DIG2
+Text Label 11350 1950 0    50   ~ 0
+4DIG3
+Text Label 11350 2050 0    50   ~ 0
+4DIG4
+Text Label 11350 2150 0    50   ~ 0
+4DIG5
+Text Label 11350 2250 0    50   ~ 0
+4DIG6
+Text Label 11350 2350 0    50   ~ 0
+4DIG7
+Wire Wire Line
+	11350 1650 11600 1650
+Wire Wire Line
+	11350 1750 11600 1750
+Wire Wire Line
+	11350 1850 11600 1850
+Wire Wire Line
+	11350 1950 11600 1950
+Wire Wire Line
+	11350 2050 11600 2050
+Wire Wire Line
+	11350 2150 11600 2150
+Wire Wire Line
+	11350 2250 11600 2250
+Wire Wire Line
+	11350 2350 11600 2350
+Text Label 12150 3150 1    50   ~ 0
+4SEGDP
+Text Label 12250 3150 1    50   ~ 0
+4SEGA
+Text Label 12350 3150 1    50   ~ 0
+4SEGB
+Text Label 12450 3150 1    50   ~ 0
+4SEGC
+Text Label 12550 3150 1    50   ~ 0
+4SEGD
+Text Label 12650 3150 1    50   ~ 0
+4SEGE
+Text Label 12750 3150 1    50   ~ 0
+4SEGF
+Text Label 12850 3150 1    50   ~ 0
+4SEGG
+Wire Wire Line
+	12150 2900 12150 3150
+Wire Wire Line
+	12250 2900 12250 3150
+Wire Wire Line
+	12350 2900 12350 3150
+Wire Wire Line
+	12450 2900 12450 3150
+Wire Wire Line
+	12550 2900 12550 3150
+Wire Wire Line
+	12650 2900 12650 3150
+Wire Wire Line
+	12750 2900 12750 3150
+Wire Wire Line
+	12850 2900 12850 3150
+$Comp
+L LibCool:MAX7219 U2
+U 1 1 5DB7F46F
+P 2500 5150
+F 0 "U2" H 2500 5400 60  0000 C CNN
+F 1 "MAX7219" H 2500 4100 60  0000 C CNN
+F 2 "Package_SO:SOIC-24W_7.5x15.4mm_P1.27mm" H 2500 5150 60  0001 C CNN
+F 3 "" H 2500 5150 60  0000 C CNN
+	1    2500 5150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 5100 1650 5100
+Wire Wire Line
+	1900 5200 1650 5200
+Text Label 1650 5200 0    50   ~ 0
+CLK
+Text Label 1650 5100 0    50   ~ 0
+CS
+Wire Wire Line
+	3100 5100 3450 5100
+Text Label 3200 5100 0    50   ~ 0
+2SEGDP
+Wire Wire Line
+	3100 5200 3450 5200
+Wire Wire Line
+	3100 5300 3450 5300
+Wire Wire Line
+	3100 5400 3450 5400
+Wire Wire Line
+	3100 5500 3450 5500
+Wire Wire Line
+	3100 5600 3450 5600
+Wire Wire Line
+	3100 5700 3450 5700
+Wire Wire Line
+	3100 5800 3450 5800
+Text Label 3200 5200 0    50   ~ 0
+2SEGG
+Text Label 3200 5300 0    50   ~ 0
+2SEGF
+Text Label 3200 5400 0    50   ~ 0
+2SEGE
+Text Label 3200 5500 0    50   ~ 0
+2SEGD
+Text Label 3200 5600 0    50   ~ 0
+2SEGC
+Text Label 3200 5700 0    50   ~ 0
+2SEGB
+Text Label 3200 5800 0    50   ~ 0
+2SEGA
+$Comp
+L power:+5V #PWR0105
+U 1 1 5DB7F491
+P 3700 5900
+F 0 "#PWR0105" H 3700 5750 50  0001 C CNN
+F 1 "+5V" V 3625 5875 50  0000 L CNN
+F 2 "" H 3700 5900 50  0001 C CNN
+F 3 "" H 3700 5900 50  0001 C CNN
+	1    3700 5900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3100 5900 3400 5900
+$Comp
+L LibCool:RES(M) R2
+U 1 1 5DB7F49C
+P 3250 6000
+F 0 "R2" H 3400 5950 39  0000 C CNN
+F 1 "10K" H 3250 6000 39  0000 C CNN
+F 2 "NewLibCool:0603_R" H 3250 6000 60  0001 C CNN
+F 3 "" H 3250 6000 60  0000 C CNN
+	1    3250 6000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 6000 3400 5900
+Connection ~ 3400 5900
+Wire Wire Line
+	3400 5900 3550 5900
+$Comp
+L LibCool:C(MM) C2
+U 1 1 5DB7F4A9
+P 3550 6000
+F 0 "C2" V 3512 6078 39  0000 L CNN
+F 1 "0.1uF" V 3587 6078 39  0000 L CNN
+F 2 "NewLibCool:0603_C" H 3588 5850 30  0001 C CNN
+F 3 "" H 3550 6000 60  0000 C CNN
+	1    3550 6000
+	0    1    1    0   
+$EndComp
+Connection ~ 3550 5900
+Wire Wire Line
+	3550 5900 3700 5900
+Wire Wire Line
+	3100 6100 3550 6100
+Wire Wire Line
+	1900 6100 1900 6300
+Wire Wire Line
+	1900 6300 3550 6300
+Wire Wire Line
+	3550 6300 3550 6100
+Connection ~ 3550 6100
+$Comp
+L power:GND #PWR0106
+U 1 1 5DB7F4BA
+P 3550 6300
+F 0 "#PWR0106" H 3550 6050 50  0001 C CNN
+F 1 "GND" H 3555 6127 50  0000 C CNN
+F 2 "" H 3550 6300 50  0001 C CNN
+F 3 "" H 3550 6300 50  0001 C CNN
+	1    3550 6300
+	1    0    0    -1  
+$EndComp
+Connection ~ 3550 6300
+Wire Wire Line
+	1900 5300 1650 5300
+Wire Wire Line
+	1900 5400 1650 5400
+Wire Wire Line
+	1900 5500 1650 5500
+Wire Wire Line
+	1900 5600 1650 5600
+Wire Wire Line
+	1900 5700 1650 5700
+Wire Wire Line
+	1900 5800 1650 5800
+Wire Wire Line
+	1900 5900 1650 5900
+Wire Wire Line
+	1900 6000 1650 6000
+Text Label 1650 5300 0    50   ~ 0
+2DIG0
+Text Label 1650 5400 0    50   ~ 0
+2DIG1
+Text Label 1650 5500 0    50   ~ 0
+2DIG2
+Text Label 1650 5600 0    50   ~ 0
+2DIG3
+Text Label 1650 5700 0    50   ~ 0
+2DIG4
+Text Label 1650 5800 0    50   ~ 0
+2DIG5
+Text Label 1650 5900 0    50   ~ 0
+2DIG6
+Text Label 1650 6000 0    50   ~ 0
+2DIG7
+$Comp
+L LibCool:Matrix_LED D2
+U 1 1 5DB7F4D5
+P 5200 4950
+F 0 "D2" H 5828 4845 60  0000 L CNN
+F 1 "Matrix_LED" H 5828 4739 60  0000 L CNN
+F 2 "NewLibCool:Matrix_LED" H 4900 5150 60  0001 C CNN
+F 3 "" H 4900 5150 60  0000 C CNN
+	1    5200 4950
+	1    0    0    -1  
+$EndComp
+Text Label 4050 4600 0    50   ~ 0
+2DIG0
+Text Label 4050 4700 0    50   ~ 0
+2DIG1
+Text Label 4050 4800 0    50   ~ 0
+2DIG2
+Text Label 4050 4900 0    50   ~ 0
+2DIG3
+Text Label 4050 5000 0    50   ~ 0
+2DIG4
+Text Label 4050 5100 0    50   ~ 0
+2DIG5
+Text Label 4050 5200 0    50   ~ 0
+2DIG6
+Text Label 4050 5300 0    50   ~ 0
+2DIG7
+Wire Wire Line
+	4050 4600 4300 4600
+Wire Wire Line
+	4050 4700 4300 4700
+Wire Wire Line
+	4050 4800 4300 4800
+Wire Wire Line
+	4050 4900 4300 4900
+Wire Wire Line
+	4050 5000 4300 5000
+Wire Wire Line
+	4050 5100 4300 5100
+Wire Wire Line
+	4050 5200 4300 5200
+Wire Wire Line
+	4050 5300 4300 5300
+Text Label 4850 6100 1    50   ~ 0
+2SEGDP
+Text Label 4950 6100 1    50   ~ 0
+2SEGA
+Text Label 5050 6100 1    50   ~ 0
+2SEGB
+Text Label 5150 6100 1    50   ~ 0
+2SEGC
+Text Label 5250 6100 1    50   ~ 0
+2SEGD
+Text Label 5350 6100 1    50   ~ 0
+2SEGE
+Text Label 5450 6100 1    50   ~ 0
+2SEGF
+Text Label 5550 6100 1    50   ~ 0
+2SEGG
+Wire Wire Line
+	4850 5850 4850 6100
+Wire Wire Line
+	4950 5850 4950 6100
+Wire Wire Line
+	5050 5850 5050 6100
+Wire Wire Line
+	5150 5850 5150 6100
+Wire Wire Line
+	5250 5850 5250 6100
+Wire Wire Line
+	5350 5850 5350 6100
+Wire Wire Line
+	5450 5850 5450 6100
+Wire Wire Line
+	5550 5850 5550 6100
+$Comp
+L LibCool:MAX7219 U3
+U 1 1 5DBAD9A7
+P 2500 8300
+F 0 "U3" H 2500 8550 60  0000 C CNN
+F 1 "MAX7219" H 2500 7250 60  0000 C CNN
+F 2 "Package_SO:SOIC-24W_7.5x15.4mm_P1.27mm" H 2500 8300 60  0001 C CNN
+F 3 "" H 2500 8300 60  0000 C CNN
+	1    2500 8300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 8250 1650 8250
+Wire Wire Line
+	1900 8350 1650 8350
+Text Label 1650 8350 0    50   ~ 0
+CLK
+Text Label 1650 8250 0    50   ~ 0
+CS
+Wire Wire Line
+	3100 8150 3450 8150
+Wire Wire Line
+	3100 8250 3450 8250
+Text Label 3200 8250 0    50   ~ 0
+3SEGDP
+Wire Wire Line
+	3100 8350 3450 8350
+Wire Wire Line
+	3100 8450 3450 8450
+Wire Wire Line
+	3100 8550 3450 8550
+Wire Wire Line
+	3100 8650 3450 8650
+Wire Wire Line
+	3100 8750 3450 8750
+Wire Wire Line
+	3100 8850 3450 8850
+Wire Wire Line
+	3100 8950 3450 8950
+Text Label 3200 8350 0    50   ~ 0
+3SEGG
+Text Label 3200 8450 0    50   ~ 0
+3SEGF
+Text Label 3200 8550 0    50   ~ 0
+3SEGE
+Text Label 3200 8650 0    50   ~ 0
+3SEGD
+Text Label 3200 8750 0    50   ~ 0
+3SEGC
+Text Label 3200 8850 0    50   ~ 0
+3SEGB
+Text Label 3200 8950 0    50   ~ 0
+3SEGA
+$Comp
+L power:+5V #PWR0109
+U 1 1 5DBAD9C5
+P 3700 9050
+F 0 "#PWR0109" H 3700 8900 50  0001 C CNN
+F 1 "+5V" V 3625 9025 50  0000 L CNN
+F 2 "" H 3700 9050 50  0001 C CNN
+F 3 "" H 3700 9050 50  0001 C CNN
+	1    3700 9050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3100 9050 3400 9050
+$Comp
+L LibCool:RES(M) R3
+U 1 1 5DBAD9CC
+P 3250 9150
+F 0 "R3" H 3400 9100 39  0000 C CNN
+F 1 "10K" H 3250 9150 39  0000 C CNN
+F 2 "NewLibCool:0603_R" H 3250 9150 60  0001 C CNN
+F 3 "" H 3250 9150 60  0000 C CNN
+	1    3250 9150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 9150 3400 9050
+Connection ~ 3400 9050
+Wire Wire Line
+	3400 9050 3550 9050
+$Comp
+L LibCool:C(MM) C3
+U 1 1 5DBAD9D5
+P 3550 9150
+F 0 "C3" V 3512 9228 39  0000 L CNN
+F 1 "0.1uF" V 3587 9228 39  0000 L CNN
+F 2 "NewLibCool:0603_C" H 3588 9000 30  0001 C CNN
+F 3 "" H 3550 9150 60  0000 C CNN
+	1    3550 9150
+	0    1    1    0   
+$EndComp
+Connection ~ 3550 9050
+Wire Wire Line
+	3550 9050 3700 9050
+Wire Wire Line
+	3100 9250 3550 9250
+Wire Wire Line
+	1900 9250 1900 9450
+Wire Wire Line
+	1900 9450 3550 9450
+Wire Wire Line
+	3550 9450 3550 9250
+Connection ~ 3550 9250
+$Comp
+L power:GND #PWR0110
+U 1 1 5DBAD9E2
+P 3550 9450
+F 0 "#PWR0110" H 3550 9200 50  0001 C CNN
+F 1 "GND" H 3555 9277 50  0000 C CNN
+F 2 "" H 3550 9450 50  0001 C CNN
+F 3 "" H 3550 9450 50  0001 C CNN
+	1    3550 9450
+	1    0    0    -1  
+$EndComp
+Connection ~ 3550 9450
+Wire Wire Line
+	1900 8450 1650 8450
+Wire Wire Line
+	1900 8550 1650 8550
+Wire Wire Line
+	1900 8650 1650 8650
+Wire Wire Line
+	1900 8750 1650 8750
+Wire Wire Line
+	1900 8850 1650 8850
+Wire Wire Line
+	1900 8950 1650 8950
+Wire Wire Line
+	1900 9050 1650 9050
+Wire Wire Line
+	1900 9150 1650 9150
+Text Label 1650 8450 0    50   ~ 0
+3DIG0
+Text Label 1650 8550 0    50   ~ 0
+3DIG1
+Text Label 1650 8650 0    50   ~ 0
+3DIG2
+Text Label 1650 8750 0    50   ~ 0
+3DIG3
+Text Label 1650 8850 0    50   ~ 0
+3DIG4
+Text Label 1650 8950 0    50   ~ 0
+3DIG5
+Text Label 1650 9050 0    50   ~ 0
+3DIG6
+Text Label 1650 9150 0    50   ~ 0
+3DIG7
+$Comp
+L LibCool:Matrix_LED D3
+U 1 1 5DBAD9F9
+P 5200 8100
+F 0 "D3" H 5828 7995 60  0000 L CNN
+F 1 "Matrix_LED" H 5828 7889 60  0000 L CNN
+F 2 "NewLibCool:Matrix_LED" H 4900 8300 60  0001 C CNN
+F 3 "" H 4900 8300 60  0000 C CNN
+	1    5200 8100
+	1    0    0    -1  
+$EndComp
+Text Label 4050 7750 0    50   ~ 0
+3DIG0
+Text Label 4050 7850 0    50   ~ 0
+3DIG1
+Text Label 4050 7950 0    50   ~ 0
+3DIG2
+Text Label 4050 8050 0    50   ~ 0
+3DIG3
+Text Label 4050 8150 0    50   ~ 0
+3DIG4
+Text Label 4050 8250 0    50   ~ 0
+3DIG5
+Text Label 4050 8350 0    50   ~ 0
+3DIG6
+Text Label 4050 8450 0    50   ~ 0
+3DIG7
+Wire Wire Line
+	4050 7750 4300 7750
+Wire Wire Line
+	4050 7850 4300 7850
+Wire Wire Line
+	4050 7950 4300 7950
+Wire Wire Line
+	4050 8050 4300 8050
+Wire Wire Line
+	4050 8150 4300 8150
+Wire Wire Line
+	4050 8250 4300 8250
+Wire Wire Line
+	4050 8350 4300 8350
+Wire Wire Line
+	4050 8450 4300 8450
+Text Label 4850 9250 1    50   ~ 0
+3SEGDP
+Text Label 4950 9250 1    50   ~ 0
+3SEGA
+Text Label 5050 9250 1    50   ~ 0
+3SEGB
+Text Label 5150 9250 1    50   ~ 0
+3SEGC
+Text Label 5250 9250 1    50   ~ 0
+3SEGD
+Text Label 5350 9250 1    50   ~ 0
+3SEGE
+Text Label 5450 9250 1    50   ~ 0
+3SEGF
+Text Label 5550 9250 1    50   ~ 0
+3SEGG
+Wire Wire Line
+	4850 9000 4850 9250
+Wire Wire Line
+	4950 9000 4950 9250
+Wire Wire Line
+	5050 9000 5050 9250
+Wire Wire Line
+	5150 9000 5150 9250
+Wire Wire Line
+	5250 9000 5250 9250
+Wire Wire Line
+	5350 9000 5350 9250
+Wire Wire Line
+	5450 9000 5450 9250
+Wire Wire Line
+	5550 9000 5550 9250
+Wire Wire Line
+	3450 8150 3450 7300
+Wire Wire Line
+	10400 2050 11200 2050
+Wire Wire Line
+	11200 2050 11200 10075
+Wire Wire Line
+	11200 10075 1300 10075
+Wire Wire Line
+	1300 10075 1300 8150
+Wire Wire Line
+	1300 8150 1900 8150
+Wire Wire Line
+	1300 5000 1300 7300
+Wire Wire Line
+	1300 7300 3450 7300
+Wire Wire Line
+	1300 5000 1900 5000
+Wire Wire Line
+	3100 5000 3400 5000
+Wire Wire Line
+	3400 5000 3400 4425
+Wire Wire Line
+	3400 4425 1350 4425
+Wire Wire Line
+	1350 4425 1350 2050
+Wire Wire Line
+	1350 2050 1900 2050
+Wire Wire Line
+	9200 1885 9200 2050
+Wire Wire Line
+	7370 1885 9200 1885
+NoConn ~ 3100 2050
+$EndSCHEMATC
