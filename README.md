@@ -1,4 +1,4 @@
-HACK LABS MatrixClock                                                                                 
+HACK LABS MatrixClock : https://www.youtube.com/watch?v=k0h2WS6Prsc&t=33s                                                                                
 Author: HACK实验室                                                                                     
 YouTube ID: HACK实验室, welcome to subscribe https://www.youtube.com/channel/UCxFY1FcIYK9d7riTvIh6eiA                                                         
 HACK_CLOCK is a free download and may be used, modified, evaluated and
